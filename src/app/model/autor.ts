@@ -1,6 +1,6 @@
 export interface Autor {
     idAutor: number;
-    autor: string;
+    nombre: string;
     anioNacimiento: number;
     lugarNacimiento: {
         latitud: number;

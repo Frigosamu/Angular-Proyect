@@ -27,8 +27,8 @@ footer {
     --bs-btn-bg: #ffffe2;
     --bs-btn-border-color: #ffffe2;
     --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #c4c494;
-    --bs-btn-hover-border-color: #ffffe2;
+    --bs-btn-hover-bg: #c9c9b2;
+    --bs-btn-hover-border-color: #c9c9b2;
     --bs-btn-focus-shadow-rgb: 217, 164, 6;
     --bs-btn-active-color: #000;
     --bs-btn-active-bg: #ffffe2;
@@ -41,15 +41,15 @@ footer {
 
 .btn-orange {
     --bs-btn-color: #000;
-    --bs-btn-bg: #ffbb56; /* Naranja clarito en estado normal */
-    --bs-btn-border-color: #ffbb56; /* Naranja clarito en estado normal */
-    --bs-btn-hover-color: #fff; /* Texto blanco en hover */
-    --bs-btn-hover-bg: #e6893a; /* Naranja más oscuro en hover */
-    --bs-btn-hover-border-color: #e6893a; /* Naranja más oscuro en hover */
+    --bs-btn-bg: #ffbb56;
+    --bs-btn-border-color: #ffbb56;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #e6893a;
+    --bs-btn-hover-border-color: #e6893a;
     --bs-btn-focus-shadow-rgb: 217, 164, 6;
-    --bs-btn-active-color: #fff; /* Texto blanco en active */
-    --bs-btn-active-bg: #e6893a; /* Naranja más oscuro en active */
-    --bs-btn-active-border-color: #e6893a; /* Naranja más oscuro en active */
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #e6893a;
+    --bs-btn-active-border-color: #e6893a;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: #ffbb56;

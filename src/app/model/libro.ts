@@ -4,4 +4,8 @@ export interface Libro {
     anioPublicacion: number;
     autor: string;
     genero: string;
+    idAutor: number;
+    imagen: string;
+    sinopsis: string;
+    precio: number;
 }

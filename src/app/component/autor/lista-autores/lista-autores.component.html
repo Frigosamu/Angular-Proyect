@@ -1,1 +1,36 @@
-<p>lista-autores works!</p>
+<div class="container my-3">
+    <h2 class="d-flex justify-content-center m-3">Lista de Autores</h2>
+
+    @if (autores.length != 0) {
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+            <thead class="table-success">
+                <tr>
+                    <th>ID</th>
+                    <th>Autor</th>
+                    <th>Año de Nacimiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                @for (autor of autores; track autor.idAutor) {
+                <tr>
+                    <td class="fw-semibold">{{ autor.idAutor }}</td>
+                    <td>{{ autor.nombre }}</td>
+                    <td>{{ autor.anioNacimiento }}</td>
+                    <td>
+                        <a class="btn btn-success m-1" [routerLink]="['/editar-autor']">Editar</a>
+                        <a class="btn btn-orange" [routerLink]="['/']">Detalles</a>
+                        <a class="btn btn-danger m-1" (click)="deleteAutor(autor.idAutor)">Eliminar</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    } @else {
+    <div class="alert alert-warning" role="alert">
+        No hay autores registrados
+    </div>
+    }
+</div>
