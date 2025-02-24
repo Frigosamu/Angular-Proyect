@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+.logo {
+    height: 100px;
+}
+
+header {
+    background: linear-gradient(#18744a, 30%,#649254);
+}
+
+body {
+    background-color: #f8efed;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer {
+    background: linear-gradient(#649254, 80%, #18744a);
+    color: white;
+    text-align: center;
+}

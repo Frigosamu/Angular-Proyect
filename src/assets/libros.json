@@ -1,0 +1,46 @@
+{
+    "libros": [
+        {
+            "idLibro": 1,
+            "nombre": "Cien años de soledad",
+            "anioPublicacion": 1967,
+            "autor": "Gabriel García Márquez",
+            "genero": "Realismo mágico"
+        },
+        {
+            "idLibro": 2,
+            "nombre": "El amor en los tiempos del cólera",
+            "anioPublicacion": 1985,
+            "autor": "Gabriel García Márquez",
+            "genero": "Novela romántica"
+        },
+        {
+            "idLibro": 3,
+            "nombre": "Don Quijote de la Mancha",
+            "anioPublicacion": 1605,
+            "autor": "Miguel de Cervantes",
+            "genero": "Novela de caballería"
+        },
+        {
+            "idLibro": 4,
+            "nombre": "1984",
+            "anioPublicacion": 1949,
+            "autor": "George Orwell",
+            "genero": "Ciencia ficción distópica"
+        },
+        {
+            "idLibro": 5,
+            "nombre": "Fahrenheit 451",
+            "anioPublicacion": 1953,
+            "autor": "Ray Bradbury",
+            "genero": "Ciencia ficción"
+        },
+        {
+            "idLibro": 6,
+            "nombre": "La sombra del viento",
+            "anioPublicacion": 2001,
+            "autor": "Carlos Ruiz Zafón",
+            "genero": "Misterio y suspense"
+        }
+    ]
+}
