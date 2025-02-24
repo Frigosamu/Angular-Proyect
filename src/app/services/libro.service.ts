@@ -15,8 +15,8 @@ export class LibroService {
     return this.http.get<Libro[]>(this.urlLibro);
   }
 
-  getLibro(idLibro: number) {
-    return this.http.get<Libro>(`${this.urlLibro}/${idLibro}`);
+  getLibro(id: string) {
+    return this.http.get<Libro>(`${this.urlLibro}/${id}`);
   }
 
   addLibro(libro: Libro) {
@@ -24,10 +24,10 @@ export class LibroService {
   }
 
   updateLibro(libro: Libro) {
-    return this.http.put<Libro>(`${this.urlLibro}/${libro.idLibro}`, libro);
+    return this.http.put<Libro>(`${this.urlLibro}/${libro.id}`, libro);
   }
 
-  deleteLibro(idLibro: number) {
-    return this.http.delete<Libro>(`${this.urlLibro}/${idLibro}`);
+  deleteLibro(id: string) {
+    return this.http.delete<Libro>(`${this.urlLibro}/${id}`);
   }
 }

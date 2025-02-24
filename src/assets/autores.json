@@ -1,7 +1,7 @@
 {
     "autores": [
         {
-            "idAutor": 1,
+            "id": "1",
             "nombre": "Gabriel García Márquez",
             "anioNacimiento": 1927,
             "lugarNacimiento": {
@@ -10,7 +10,7 @@
             }
         },
         {
-            "idAutor": 2,
+            "id": "2",
             "nombre": "Miguel de Cervantes",
             "anioNacimiento": 1547,
             "lugarNacimiento": {
@@ -19,7 +19,7 @@
             }
         },
         {
-            "idAutor": 3,
+            "id": "3",
             "nombre": "George Orwell",
             "anioNacimiento": 1903,
             "lugarNacimiento": {
@@ -28,7 +28,7 @@
             }
         },
         {
-            "idAutor": 4,
+            "id": "4",
             "nombre": "Ray Bradbury",
             "anioNacimiento": 1920,
             "lugarNacimiento": {
@@ -37,7 +37,7 @@
             }
         },
         {
-            "idAutor": 5,
+            "id": "5",
             "nombre": "Carlos Ruiz Zafón",
             "anioNacimiento": 1964,
             "lugarNacimiento": {

@@ -1,5 +1,5 @@
 export interface Autor {
-    idAutor: number;
+    id: string;
     nombre: string;
     anioNacimiento: number;
     lugarNacimiento: {

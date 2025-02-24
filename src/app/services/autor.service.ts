@@ -15,7 +15,7 @@ export class AutorService {
     return this.http.get<Autor[]>(this.urlAutores);
   }
 
-  getAutor(id: number) {
+  getAutor(id: string) {
     return this.http.get<Autor>(`${this.urlAutores}/${id}`);
   }
 
@@ -24,10 +24,10 @@ export class AutorService {
   }
   
   updateAutor(autor: Autor) {
-    return this.http.put(`${this.urlAutores}/${autor.idAutor}`, autor);
+    return this.http.put(`${this.urlAutores}/${autor.id}`, autor);
   }
 
-  deleteAutor(id: number) {
+  deleteAutor(id: string) {
     return this.http.delete(`${this.urlAutores}/${id}`);
   }
 

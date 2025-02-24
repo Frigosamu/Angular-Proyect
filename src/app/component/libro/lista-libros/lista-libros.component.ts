@@ -4,6 +4,7 @@ import { Libro } from '../../../model/libro';
 import { LibroService } from '../../../services/libro.service';
 import { AutorService } from '../../../services/autor.service';
 import { CommonModule } from '@angular/common';
+import { Autor } from '../../../model/autor';
 
 @Component({
   selector: 'app-lista-libros',
@@ -13,8 +14,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ListaLibrosComponent {
   libros: Libro[] = [];
+  autores: Autor[] = [];
 
-  constructor(private libroService: LibroService, private autorService: AutorService) {}
+  constructor(private libroService: LibroService, private autorService: AutorService) {
+    this.libroService.getLibros().subscribe(l => this.libros = l);
+    this.autorService.getAutores().subscribe(a => this.autores = a);
+  }
 
   ngOnInit() {
     this.libroService.getLibros().subscribe((libros) => {
@@ -22,9 +27,10 @@ export class ListaLibrosComponent {
     });
   }
 
-  deleteLibro(idLibro: number) {
-    this.libroService.deleteLibro(idLibro).subscribe(() => {
-      this.libros = this.libros.filter((libro) => libro.idLibro !== idLibro);
+  deleteLibro(id: string) {
+    this.libroService.deleteLibro(id).subscribe(() => {
+      this.libroService.getLibros().subscribe(l => 
+        this.libros = l);
     });
   }
 
@@ -40,7 +46,7 @@ export class ListaLibrosComponent {
     });
   }
 
-  trackLibro(index: number, libro: Libro): number {
-    return libro.idLibro;
+  trackLibro(index: number, libro: Libro): string {
+    return libro.id;
   }
 }

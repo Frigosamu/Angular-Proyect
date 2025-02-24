@@ -13,15 +13,15 @@
                 </tr>
             </thead>
             <tbody class="text-center">
-                @for (autor of autores; track autor.idAutor) {
+                @for (autor of autores; track autor.id) {
                 <tr>
-                    <td class="fw-semibold">{{ autor.idAutor }}</td>
+                    <td class="fw-semibold">{{ autor.id }}</td>
                     <td>{{ autor.nombre }}</td>
                     <td>{{ autor.anioNacimiento }}</td>
                     <td>
                         <a class="btn btn-success m-1" [routerLink]="['/editar-autor']">Editar</a>
                         <a class="btn btn-orange" [routerLink]="['/']">Detalles</a>
-                        <a class="btn btn-danger m-1" (click)="deleteAutor(autor.idAutor)">Eliminar</a>
+                        <a class="btn btn-danger m-1" (click)="deleteAutor(autor.id)">Eliminar</a>
                     </td>
                 </tr>
                 }

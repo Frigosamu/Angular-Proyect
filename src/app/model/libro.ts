@@ -1,10 +1,10 @@
 export interface Libro {
-    idLibro: number;
+    id: string;
     nombre: string;
     anioPublicacion: number;
     autor: string;
     genero: string;
-    idAutor: number;
+    idAutor: string;
     imagen: string;
     sinopsis: string;
     precio: number;
