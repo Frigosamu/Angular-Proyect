@@ -34,6 +34,7 @@ export class ListaLibrosComponent {
     });
   }
 
+  //a partir de aqui se puede eliminar
   getAllLibros() {
     this.libroService.getLibros().subscribe(() => {
       this.getAllLibros();
@@ -44,9 +45,5 @@ export class ListaLibrosComponent {
     this.libroService.addLibro(libro).subscribe(() => {
       this.getAllLibros();
     });
-  }
-
-  trackLibro(index: number, libro: Libro): string {
-    return libro.id;
   }
 }

@@ -1,15 +1,21 @@
 <div class="container my-3">
-    <h2 class="d-flex justify-content-center m-3">Lista de Libros</h2>
+    <div class="text-center">
+        <h2 class="d-flex justify-content-center m-3">Lista de Libros</h2>
+        <a class="btn btn-dark text-white rounded-pill shadow-sm" [routerLink]="['/crear-libro']">Añadir un nuevo
+            libro</a>
+    </div>
 
-    <!-- Condicional para verificar si hay libros -->
-     @if (libros.length != 0) {
+    @if (libros.length != 0) {
     <div class="container">
-        <!-- Iterar sobre los libros -->
-         @for (libro of libros; track libro.id) {
+        @for (libro of libros; track libro.id) {
         <div>
             <div class="d-flex align-items-center">
                 <div class="me-4">
-                    <img [src]="libro.imagen" alt="{{ libro.nombre }}" style="max-width: 150px;">
+                    @if (libro.imagen === "") {
+                        <p class="text-danger">Imagen No Disponible</p>
+                    } @else {
+                        <img [src]="libro.imagen" alt="{{ libro.nombre }}" style="max-width: 150px;">
+                    }
                 </div>
 
                 <div class="text-start">
@@ -18,21 +24,20 @@
                     <p><strong>Año de publicación:</strong> {{ libro.anioPublicacion }}</p>
                     <p><strong>Género:</strong> {{ libro.genero }}</p>
                     <p><strong>Sinopsis:</strong> {{ libro.sinopsis }}</p>
-                    <p><strong>Precio:</strong> {{ libro.precio }}€</p>
 
                     <a class="btn btn-success" [routerLink]="['/editar-libro']">Editar</a>
                     <a class="btn btn-orange m-1" [routerLink]="['/']">Detalles</a>
                     <a class="btn btn-danger" (click)="deleteLibro(libro.id)">Eliminar</a>
                 </div>
-            </div><hr>
+            </div>
+            <hr>
         </div>
-    }
+        }
     </div>
 
-    <!-- Mensaje si no hay libros -->
-} @else {
+    } @else {
     <div class="alert alert-warning" role="alert">
         No hay libros registrados
     </div>
-}
+    }
 </div>

@@ -11,11 +11,6 @@ body {
     background-color: #f8efed;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 footer {
     background: linear-gradient(#649254, 80%, #18744a);
     color: white;

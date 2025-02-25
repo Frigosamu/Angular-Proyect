@@ -7,5 +7,4 @@ export interface Libro {
     idAutor: string;
     imagen: string;
     sinopsis: string;
-    precio: number;
 }
