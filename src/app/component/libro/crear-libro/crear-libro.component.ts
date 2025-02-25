@@ -5,10 +5,11 @@ import { LibroService } from '../../../services/libro.service';
 import { AutorService } from '../../../services/autor.service';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterLink, RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-libro',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './crear-libro.component.html',
   styleUrl: './crear-libro.component.css'
 })
@@ -20,8 +21,8 @@ export class CrearLibroComponent implements OnInit {
   constructor(
     private libroService: LibroService,
     private autorService: AutorService,
-    private fb: FormBuilder
-
+    private fb: FormBuilder,
+    private router: Router
   ) {
     this.form = this.fb.group({
       nombre: ['', [Validators.required]],
@@ -44,9 +45,7 @@ export class CrearLibroComponent implements OnInit {
 
     const storedForm = localStorage.getItem('formularioLibro');
     if (storedForm) {
-      const parsedForm = JSON.parse(storedForm);
-      console.log('Formulario almacenado:', parsedForm);
-      this.form.patchValue(parsedForm);
+      this.form.patchValue(JSON.parse(storedForm));
     }
 
     this.form.valueChanges.subscribe(value => {
@@ -54,7 +53,7 @@ export class CrearLibroComponent implements OnInit {
     });
   }
 
-  sumbit() {
+  submit() {
     if (this.form.valid) {
       const autorSeleccionado = this.autores.find(autor => autor.id === this.form.value.autor);
 
@@ -73,6 +72,7 @@ export class CrearLibroComponent implements OnInit {
         this.libros.push(nuevoLibro);
         this.form.reset();
         localStorage.removeItem('formularioLibro');
+        this.router.navigate(['/listar-libros']);
       });
 
     } else {

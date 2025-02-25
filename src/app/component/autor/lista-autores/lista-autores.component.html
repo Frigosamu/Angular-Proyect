@@ -1,5 +1,9 @@
 <div class="container my-3">
-    <h2 class="d-flex justify-content-center m-3">Lista de Autores</h2>
+    <div class="text-center mb-3">
+        <h2 class="d-flex justify-content-center m-3">Lista de Autores</h2>
+        <a class="btn btn-dark text-white rounded-pill shadow-sm" [routerLink]="['/crear-autor']">Añadir un nuevo
+            autor</a>
+    </div>
 
     @if (autores.length != 0) {
     <div class="table-responsive">
@@ -19,7 +23,7 @@
                     <td>{{ autor.nombre }}</td>
                     <td>{{ autor.anioNacimiento }}</td>
                     <td>
-                        <a class="btn btn-success m-1" [routerLink]="['/editar-autor']">Editar</a>
+                        <a class="btn btn-success m-1" [routerLink]="['/editar-autor', autor.id]">Editar</a>
                         <a class="btn btn-orange" [routerLink]="['/']">Detalles</a>
                         <a class="btn btn-danger m-1" (click)="deleteAutor(autor.id)">Eliminar</a>
                     </td>

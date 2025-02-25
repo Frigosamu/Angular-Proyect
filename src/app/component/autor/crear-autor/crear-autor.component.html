@@ -1,1 +1,28 @@
-<p>crear-autor works!</p>
+<div class="container mt-3 mb-3 d-flex justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center">Añadir un Nuevo Autor</h2>
+        <form class="p-4 rounded shadow bg-white" [formGroup]="form" (submit)="submit()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Autor</label>
+                <input type="text" id="nombre" class="form-control" formControlName="nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="anioNacimiento" class="form-label">Año de Nacimiento</label>
+                <input type="number" id="anioNacimiento" class="form-control" formControlName="anioNacimiento" max="2025">
+            </div>
+
+            <div class="mb-3">
+                <label for="latitud" class="form-label">Latitud del Lugar de Nacimiento</label>
+                <input type="number" id="latitud" class="form-control" formControlName="latitud">
+            </div>
+
+            <div class="mb-3">
+                <label for="longitud" class="form-label">Longitud del Lugar de Nacimiento</label>
+                <input type="number" id="longitud" class="form-control" formControlName="longitud">
+            </div>
+
+            <button type="submit" class="btn btn-orange w-100">Añadir Autor</button>
+        </form>
+    </div>
+</div>

@@ -1,1 +1,48 @@
-<p>editar-libro works!</p>
+<div class="container mt-4 mb-4 d-flex justify-content-center">
+    <div class="col-md-6">
+
+        <h2 class="text-center">Editar Libro</h2>
+
+        <form class="p-4 rounded shadow bg-white" [formGroup]="form" (submit)="submit()">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre del Libro</label>
+                <input type="text" id="nombre" class="form-control" name="nombre" formControlName="nombre">
+            </div>
+
+            <div class="mb-3">
+                <label for="anioPublicacion" class="form-label">Año de Publicación</label>
+                <input type="number" id="anioPublicacion" class="form-control" name="anioPublicacion" max="2025" formControlName="anioPublicacion">
+            </div>
+
+            <div class="mb-3">
+                <label for="autor" class="form-label">Autor</label>
+                <select name="autor" id="autor" class="form-select" formControlName="autor">
+                    <option value="" disabled selected>Selecciona un autor</option>
+                    @for (autor of autores; track autor.id) {
+                    <option [value]="autor.id" [selected]="autor.id">{{ autor.nombre }}</option>
+                    }
+                </select>
+                <small class="form-text text-muted">Si no encuentra el autor, <a [routerLink]="['/crear-autor']">click aquí</a> para añadir uno
+                    nuevo.</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="genero" class="form-label">Género</label>
+                <input type="text" id="genero" class="form-control" name="genero" formControlName="genero">
+            </div>
+
+            <div class="mb-3">
+                <label for="imagen" class="form-label">URL de la Imagen</label>
+                <input type="url" id="imagen" class="form-control" name="imagen" formControlName="imagen">
+            </div>
+
+            <div class="mb-3">
+                <label for="sinopsis" class="form-label">Sinopsis</label>
+                <textarea id="sinopsis" class="form-control" rows="4" name="sinopsis" formControlName="sinopsis">{{ form.value.sinopsis }}</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-orange w-100">Guardar</button>
+        </form>
+    </div>
+</div>

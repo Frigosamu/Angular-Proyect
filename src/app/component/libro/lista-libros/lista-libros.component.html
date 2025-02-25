@@ -25,7 +25,7 @@
                     <p><strong>Género:</strong> {{ libro.genero }}</p>
                     <p><strong>Sinopsis:</strong> {{ libro.sinopsis }}</p>
 
-                    <a class="btn btn-success" [routerLink]="['/editar-libro']">Editar</a>
+                    <a class="btn btn-success" [routerLink]="['/editar-libro', libro.id]">Editar</a>
                     <a class="btn btn-orange m-1" [routerLink]="['/']">Detalles</a>
                     <a class="btn btn-danger" (click)="deleteLibro(libro.id)">Eliminar</a>
                 </div>

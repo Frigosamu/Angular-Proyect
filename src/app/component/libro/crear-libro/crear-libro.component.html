@@ -3,7 +3,7 @@
 
         <h2 class="text-center">Añadir un Nuevo Libro</h2>
 
-        <form class="p-4 rounded shadow bg-white" [formGroup]="form" (submit)="sumbit()">
+        <form class="p-4 rounded shadow bg-white" [formGroup]="form" (submit)="submit()">
 
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre del Libro</label>
@@ -12,7 +12,8 @@
 
             <div class="mb-3">
                 <label for="anioPublicacion" class="form-label">Año de Publicación</label>
-                <input type="number" id="anioPublicacion" class="form-control" name="anioPublicacion" max="2025" formControlName="anioPublicacion">
+                <input type="number" id="anioPublicacion" class="form-control" name="anioPublicacion" max="2025"
+                    formControlName="anioPublicacion">
             </div>
 
             <div class="mb-3">
@@ -24,7 +25,8 @@
                     <option [value]="autor.id">{{ autor.nombre }}</option>
                     }
                 </select>
-                <small class="form-text text-muted">Si no encuentra el autor, <a href="#">click aquí</a> para añadir uno
+                <small class="form-text text-muted">Si no encuentra el autor, <a [routerLink]="['/crear-autor']">click
+                        aquí</a> para añadir uno
                     nuevo.</small>
             </div>
 
@@ -40,7 +42,8 @@
 
             <div class="mb-3">
                 <label for="sinopsis" class="form-label">Sinopsis</label>
-                <textarea id="sinopsis" class="form-control" rows="4" name="sinopsis" formControlName="sinopsis"></textarea>
+                <textarea id="sinopsis" class="form-control" rows="4" name="sinopsis"
+                    formControlName="sinopsis"></textarea>
             </div>
 
             <button type="submit" class="btn btn-orange w-100">Añadir Libro</button>

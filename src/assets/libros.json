@@ -62,23 +62,13 @@
     },
     {
       "id": "7",
-      "nombre": "Martin matin",
-      "anioPublicacion": 2025,
+      "nombre": "El libro de la selva",
+      "anioPublicacion": 1976,
       "autor": "Miguel de Cervantes",
-      "genero": "Comedia",
-      "idAutor": "2",
-      "imagen": "https://i.pinimg.com/736x/ba/ae/ed/baaeed7bb3898fda9d5d78c8e39c7599.jpg",
-      "sinopsis": "El niño que se tranforma"
-    },
-    {
-      "id": "8",
-      "nombre": "Pepe",
-      "anioPublicacion": 1977,
-      "autor": "Miguel de Cervantes",
-      "genero": "pepe",
+      "genero": "Infantil",
       "idAutor": "2",
       "imagen": "",
-      "sinopsis": "Amarilo"
+      "sinopsis": "El niño mono. Con un gorila."
     }
   ]
 }
