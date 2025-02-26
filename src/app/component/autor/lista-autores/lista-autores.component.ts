@@ -4,16 +4,18 @@ import { AutorService } from '../../../services/autor.service';
 import { LibroService } from '../../../services/libro.service';
 import { RouterLink, RouterModule } from '@angular/router';
 import { Libro } from '../../../model/libro';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-lista-autores',
-  imports: [RouterLink, RouterModule],
+  imports: [RouterLink, RouterModule, FormsModule],
   templateUrl: './lista-autores.component.html',
   styleUrl: './lista-autores.component.css'
 })
 export class ListaAutoresComponent {
   autores: Autor[] = [];
   libros: Libro[] = [];
+  filtro: string = 'id';
 
   constructor(private autorService: AutorService, private libroService: LibroService) {
     this.libroService.getLibros().subscribe(l => this.libros = l);
@@ -42,15 +44,13 @@ export class ListaAutoresComponent {
     });
   }
 
-  getAllAutores() {
-    this.autorService.getAutores().subscribe((autores) => {
-      this.autores = autores;
-    });
+  ordenarAutores() {
+    if (this.filtro === 'id') {
+      this.autores.sort((a, b) => Number(a.id) - Number(b.id));
+    } else if (this.filtro === 'alfabetico') {
+      this.autores.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    }
   }
+  
 
-  addAutor(autor: Autor) {
-    this.autorService.addAutor(autor).subscribe(() => {
-      this.getAllAutores();
-    });
-  }
 }

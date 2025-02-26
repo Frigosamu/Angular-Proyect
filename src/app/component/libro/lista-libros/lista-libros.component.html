@@ -5,6 +5,14 @@
             libro</a>
     </div>
 
+    <div class="text-center my-3">
+        <label for="ordenarPor" class="me-2">Ordenar por:</label>
+        <select id="ordenarPor" class="form-select d-inline-block w-auto" [(ngModel)]="filtro" (click)="ordenarLibros()">
+            <option value="alfabetico">Alfabéticamente</option>
+            <option value="fecha">Fecha de Publicación</option>
+        </select>
+    </div>
+
     @if (libros.length != 0) {
     <div class="container">
         @for (libro of libros; track libro.id) {
@@ -26,7 +34,7 @@
                     <p><strong>Sinopsis:</strong> {{ libro.sinopsis }}</p>
 
                     <a class="btn btn-success" [routerLink]="['/editar-libro', libro.id]">Editar</a>
-                    <a class="btn btn-orange m-1" [routerLink]="['/']">Detalles</a>
+                    <a class="btn btn-orange m-1" [routerLink]="['/detalle-libro', libro.id]">Detalles</a>
                     <a class="btn btn-danger" (click)="deleteLibro(libro.id)">Eliminar</a>
                 </div>
             </div>

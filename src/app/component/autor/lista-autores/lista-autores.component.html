@@ -5,6 +5,14 @@
             autor</a>
     </div>
 
+    <div class="text-center mb-3">
+        <label for="filtro" class="me-2">Ordenar por:</label>
+        <select id="filtro" class="form-select d-inline-block w-auto" [(ngModel)]="filtro"  (click)="ordenarAutores()">
+            <option value="id">ID</option>
+            <option value="alfabetico">Nombre</option>
+        </select>
+    </div>
+
     @if (autores.length != 0) {
     <div class="table-responsive">
         <table class="table table-bordered table-striped text-center">
@@ -24,7 +32,7 @@
                     <td>{{ autor.anioNacimiento }}</td>
                     <td>
                         <a class="btn btn-success m-1" [routerLink]="['/editar-autor', autor.id]">Editar</a>
-                        <a class="btn btn-orange" [routerLink]="['/']">Detalles</a>
+                        <a class="btn btn-orange" [routerLink]="['/detalle-autor', autor.id]">Detalles</a>
                         <a class="btn btn-danger m-1" (click)="deleteAutor(autor.id)">Eliminar</a>
                     </td>
                 </tr>

@@ -7,12 +7,12 @@
 
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre del Libro</label>
-                <input type="text" id="nombre" class="form-control" name="nombre" formControlName="nombre">
+                <input type="text" id="nombre" class="form-control" name="nombre" formControlName="nombre" required>
             </div>
 
             <div class="mb-3">
                 <label for="anioPublicacion" class="form-label">Año de Publicación</label>
-                <input type="number" id="anioPublicacion" class="form-control" name="anioPublicacion" max="2025" formControlName="anioPublicacion">
+                <input type="number" id="anioPublicacion" class="form-control" name="anioPublicacion" max="2025" formControlName="anioPublicacion" required>
             </div>
 
             <div class="mb-3">
@@ -29,7 +29,7 @@
 
             <div class="mb-3">
                 <label for="genero" class="form-label">Género</label>
-                <input type="text" id="genero" class="form-control" name="genero" formControlName="genero">
+                <input type="text" id="genero" class="form-control" name="genero" formControlName="genero" required>
             </div>
 
             <div class="mb-3">
@@ -39,7 +39,7 @@
 
             <div class="mb-3">
                 <label for="sinopsis" class="form-label">Sinopsis</label>
-                <textarea id="sinopsis" class="form-control" rows="4" name="sinopsis" formControlName="sinopsis">{{ form.value.sinopsis }}</textarea>
+                <textarea id="sinopsis" class="form-control" rows="4" name="sinopsis" formControlName="sinopsis" required>{{ form.value.sinopsis }}</textarea>
             </div>
 
             <button type="submit" class="btn btn-orange w-100">Guardar</button>
