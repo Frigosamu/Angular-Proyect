@@ -1,59 +1,33 @@
-# AngularProyect
+# Proyecto Librería Utopic
+Este proyecto gestiona autores y libros con una relación 1:N.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+## Instalación
+- git clone https://github.com/Frigosamu/Angular-Proyect
+- npm install
+- npm install @angular/core
+- En caso de que sea necesario también: npm install bootstrap
 
-## Development server
+## Iniciar proyecto
+- npm run startx2
 
-To start a local development server, run:
+## Características
+### Libros
+- Carrusel de Libros: En la página principal se muestra un carrusel de libros, donde se puede ver el nombre y autor de cada libro.
+- Listar Libros: Se puede ver la lista completa de libros disponibles.
+- Añadir Libro: Los usuarios pueden agregar nuevos libros a la librería.
+- Editar Libro: Puedes cambiar lo que necesario del libro por si falta información o es necesario eliminar información no deseada.
+- Detalle Libro: Te permite ver los detalles de cada libro en profundidad.
+- Eliminar Libro: Los libros pueden eliminarse de la biblioteca.
 
-```bash
-ng serve
-```
+### Autores
+- Listar Autores: Se puede ver la lista completa de autores.
+- Añadir Autor: Los usuarios pueden agregar nuevos autores.
+- Editar Autor: Puedes cambiar lo que necesario del autor por si falta información o es necesario eliminar información no deseada.
+- Detalle Autor: Te permite ver los detalles de cada autor en profundidad incluido un mapa de su lugar de Nacimiento.
+- Eliminar Autor: Los autores pueden eliminarse del sistema.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tecnologías Utilizadas
+- Angular: Framework para la construcción de aplicaciones web.
+- Bootstrap: Para diseño responsivo y estilos.
+- RxJS: Para manejo de datos asíncronos y observables.
+- TypeScript: Lenguaje de programación para desarrollar la aplicación.
