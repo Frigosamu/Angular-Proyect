@@ -5,6 +5,8 @@ Este proyecto gestiona autores y libros con una relación 1:N.
 - git clone https://github.com/Frigosamu/Angular-Proyect
 - npm install
 - npm install @angular/core
+- npm install -g json-server
+- npm install concurrently --save-dev
 - En caso de que sea necesario también: npm install bootstrap
 
 ## Iniciar proyecto
