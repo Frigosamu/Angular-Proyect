@@ -1,1 +1,26 @@
-<p>entrada works!</p>
+<div>
+    <h2 class="text-center m-2">BIENVENIDO</h2>
+    <h3 class="text-center mb-5">LIBRERIA UTOPIC</h3>
+
+    <div id="librosCarrusel" class="carousel slide mb">
+        <div class="carousel-inner">
+            <div *ngFor="let libro of libros; let i = index" class="carousel-item" [ngClass]="{ 'active': i === 0 }">
+                @if (libro.imagen === "") {
+                    <p class="text-center text-danger m-5" style="height: 300px;">Imagen No Disponible</p>
+                } @else {
+                    <img [src]="libro.imagen" class="d-flex mx-auto" alt="{{ libro.nombre }}" style="width: 300px;">
+                }
+                <div class="text-center p-3 rounded-3 bg-dark bg-opacity-50 m-3 mx-auto" style="width: 200px;">
+                    <h5 class="h6 text-white">{{ libro.nombre }}</h5>
+                    <p class="small text-white">{{ libro.autor }}</p>
+                </div>                            
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#librosCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#librosCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>

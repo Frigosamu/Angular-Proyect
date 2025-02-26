@@ -53,6 +53,15 @@
         "latitud": 52.364,
         "longitud": -11.255
       }
+    },
+    {
+      "id": "7",
+      "nombre": "PEPE VIYUELA",
+      "anioNacimiento": 1976,
+      "lugarNacimiento": {
+        "latitud": 42.46261,
+        "longitud": -2.44443
+      }
     }
   ]
 }
